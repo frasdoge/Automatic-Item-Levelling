@@ -10,6 +10,14 @@ DB_AIL_Rarity("AIL_Rare", "Rare");
 DB_AIL_Rarity("AIL_Uncommon", "Uncommon");
 DB_AIL_Rarity("AIL_Common", "Common");
 
+GlobalSetFlag("AIL_Unique");
+GlobalSetFlag("AIL_Divine");
+GlobalSetFlag("AIL_Legendary");
+GlobalSetFlag("AIL_Epic");
+GlobalSetFlag("AIL_Rare");
+GlobalSetFlag("AIL_Uncommon");
+GlobalSetFlag("AIL_Common");
+
 KBSECTION
 
 // Add book (requires extender as selecting options would otherwise be useless)
