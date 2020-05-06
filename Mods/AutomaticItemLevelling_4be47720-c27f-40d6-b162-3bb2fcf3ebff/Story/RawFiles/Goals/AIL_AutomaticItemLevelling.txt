@@ -1,0 +1,89 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+
+// Events to trigger levelling on
+IF
+GameStarted(_Region, _)
+AND
+IsGameLevel(_Region, 1)
+AND
+DB_IsPlayer(_Char)
+THEN
+InventoryLaunchIterator(_Char, "AIL_InventoryLevelUp", "");
+
+IF
+CharacterLeveledUp((CHARACTERGUID)_Char)
+AND
+DB_IsPlayer(_Char)
+THEN
+ProcObjectTimer(_Char, "AIL_LevelUpDelay", 1200); // Delay on levelling to allow for game lag and avoid issues
+
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Char, "AIL_LevelUpDelay")
+THEN
+InventoryLaunchIterator(_Char, "AIL_InventoryLevelUp", "AIL_CleanUp");
+
+IF
+CharacterJoinedParty((CHARACTERGUID)_Char)
+AND
+DB_IsPlayer(_Char)
+THEN
+InventoryLaunchIterator(_Char, "AIL_InventoryLevelUp", "AIL_CleanUp");
+
+IF
+ItemAddedToCharacter((ITEMGUID)_Item, (CHARACTERGUID)_Char)
+AND
+DB_IsPlayer(_Char)
+THEN
+SetStoryEvent(_Item, "AIL_InventoryLevelUp");
+
+// Recursive levelling on containers
+
+QRY
+AIL_IterateOnContainers((ITEMGUID)_Item)
+AND
+ItemIsContainer(_Item, 1)
+THEN
+InventoryLaunchIterator(_Item, "AIL_InventoryLevelUp", "");
+
+IF
+StoryEvent((ITEMGUID)_Item, "AIL_InventoryLevelUp")
+AND
+NOT AIL_IterateOnContainers(_Item)
+THEN
+AIL_LevelItem(_Item);
+
+// Actually level the items
+// With extender checks for set options for rarity and prevents higher level items being downscaled
+
+PROC
+AIL_LevelItem((ITEMGUID)_Item)
+AND
+ItemIsEquipable(_Item, 1)
+AND
+ItemGetDurability(_Item, _Durability)
+AND
+ItemGetOwner(_Item, _Char)
+AND
+CharacterGetLevel(_Char, _CharLevel)
+/* [OSITOOLS_ONLY]
+AND
+NRD_ItemGetString(_Item, "ItemTypeReal", _ItemType)
+AND
+DB_AIL_RarityActive(_ItemType)
+AND
+NRD_ItemGetInt(_Item, "Level", _ItemLevel)
+AND
+_ItemLevel < _CharLevel
+*/
+THEN
+ItemLevelUpTo(_Item, _CharLevel);
+ItemSetDurability(_Item, _Durability);
+
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"

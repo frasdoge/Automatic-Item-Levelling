@@ -1,0 +1,9 @@
+new entry "AIL_ArmamentsOfTheGods"
+type "Object"
+data "RootTemplate" "e5907cf1-cfa5-4f3c-bc41-25377f074d32"
+data "Act" "1"
+data "UseAPCost" "0"
+data "Value" "0"
+data "Weight" "0"
+data "Unique" "1"
+

@@ -1,0 +1,65 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+DB_AIL_Rarity("AIL_Unique", "Unique");
+DB_AIL_Rarity("AIL_Divine", "Divine");
+DB_AIL_Rarity("AIL_Legendary", "Legendary");
+DB_AIL_Rarity("AIL_Epic", "Epic");
+DB_AIL_Rarity("AIL_Rare", "Rare");
+DB_AIL_Rarity("AIL_Uncommon", "Uncommon");
+DB_AIL_Rarity("AIL_Common", "Common");
+
+KBSECTION
+
+// Add book (requires extender as selecting options would otherwise be useless)
+
+/* [OSITOOLS_ONLY]
+IF
+GameStarted(_Region, _)
+AND
+IsGameLevel(_Region, 1)
+AND
+DB_IsPlayer(_Char)
+AND
+ItemTemplateIsInCharacterInventory(_Char, "BOOK_AIL_ArmamentsOfTheGods_e5907cf1-cfa5-4f3c-bc41-25377f074d32", 0)
+THEN
+ItemTemplateAddTo("BOOK_AIL_ArmamentsOfTheGods_e5907cf1-cfa5-4f3c-bc41-25377f074d32", _Char, 1);
+*/
+
+// Using book
+
+IF
+CharacterUsedItem(_Char, _Item)
+AND
+DB_IsPlayer(_Char)
+AND
+GetTemplate(_Item, "BOOK_AIL_ArmamentsOfTheGods_e5907cf1-cfa5-4f3c-bc41-25377f074d32")
+AND
+QRY_SpeakerIsAvailable(_Char)
+THEN
+Proc_StartDialog(0, "AIL_Dialog", _Char);
+
+// Changing database for item rarity
+
+IF
+GlobalFlagCleared(_FlagName)
+AND
+DB_AIL_Rarity(_FlagName, _ItemType)
+AND
+DB_AIL_RarityActive(_ItemType)
+THEN
+NOT DB_AIL_RarityActive(_ItemType);
+
+IF
+GlobalFlagSet(_FlagName)
+AND
+DB_AIL_Rarity(_FlagName, _ItemType)
+AND
+NOT DB_AIL_RarityActive(_ItemType)
+THEN
+DB_AIL_RarityActive(_ItemType);
+
+EXITSECTION
+
+ENDEXITSECTION

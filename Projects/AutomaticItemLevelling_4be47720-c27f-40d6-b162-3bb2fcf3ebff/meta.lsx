@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="6" build="0" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="4be47720-c27f-40d6-b162-3bb2fcf3ebff" type="23" />
+            <attribute id="Name" value="AutomaticItemLevelling" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="8d34d13f-628a-476a-80f3-14798c020b01" type="23" />
+        </node>
+    </region>
+</save>
