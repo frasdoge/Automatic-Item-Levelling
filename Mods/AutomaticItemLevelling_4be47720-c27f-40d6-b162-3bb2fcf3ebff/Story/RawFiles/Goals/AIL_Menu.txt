@@ -42,8 +42,14 @@ AND
 DB_IsPlayer(_Char)
 AND
 ObjectGetFlag(_Char, "AIL_HasReceivedBook", 0)
+THEN
+ItemTemplateAddTo("BOOK_AIL_ArmamentsOfTheGods_e5907cf1-cfa5-4f3c-bc41-25377f074d32", _Char, 1);
+ObjectSetFlag(_Char, "AIL_HasReceivedBook");
+
+IF
+CharacterJoinedParty(_Char)
 AND
-ItemTemplateIsInCharacterInventory(_Char, "BOOK_AIL_ArmamentsOfTheGods_e5907cf1-cfa5-4f3c-bc41-25377f074d32", 0)
+ObjectGetFlag(_Char, "AIL_HasReceivedBook", 0)
 THEN
 ItemTemplateAddTo("BOOK_AIL_ArmamentsOfTheGods_e5907cf1-cfa5-4f3c-bc41-25377f074d32", _Char, 1);
 ObjectSetFlag(_Char, "AIL_HasReceivedBook");
