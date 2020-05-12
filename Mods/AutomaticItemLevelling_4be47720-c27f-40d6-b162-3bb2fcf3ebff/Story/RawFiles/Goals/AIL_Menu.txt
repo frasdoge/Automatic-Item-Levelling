@@ -31,7 +31,7 @@ THEN
 DB_LeaderLib_ModApi_RegisterMenu("4be47720-c27f-40d6-b162-3bb2fcf3ebff", "AIL_Dialog", "[Automatic Item Levelling] Settings");
 */
 
-// Add book if extender installed and book enabled
+// Add book if extender installed
 
 /* [OSITOOLS_ONLY]
 IF
@@ -48,6 +48,8 @@ ObjectSetFlag(_Char, "AIL_HasReceivedBook");
 
 IF
 CharacterJoinedParty(_Char)
+AND
+DB_IsPlayer(_Char)
 AND
 ObjectGetFlag(_Char, "AIL_HasReceivedBook", 0)
 THEN
