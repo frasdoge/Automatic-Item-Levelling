@@ -71,9 +71,7 @@ AND
 CharacterGetLevel(_Char, _CharLevel)
 /* [OSITOOLS_ONLY]
 AND
-NRD_ItemGetString(_Item, "ItemTypeReal", _ItemType)
-AND
-DB_AIL_RarityActive(_ItemType)
+AIL_RarityUpOrDownScale(_Item)
 AND
 NRD_ItemGetInt(_Item, "Level", _ItemLevel)
 AND

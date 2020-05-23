@@ -2,3 +2,4 @@ DB_AIL_Rarity 2
 DB_AIL_RarityActive 1
 DB_LeaderLib_ModMenu_RegisteredMenuData 5
 DB_LeaderLib_ModApi_RegisterMenu 3
+DB_AIL_ItemList 2

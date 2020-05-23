@@ -57,6 +57,21 @@ ItemTemplateAddTo("BOOK_AIL_ArmamentsOfTheGods_e5907cf1-cfa5-4f3c-bc41-25377f074
 ObjectSetFlag(_Char, "AIL_HasReceivedBook");
 */
 
+// Store original item level for rarity option if extender installed
+
+/* [OSITOOLS_ONLY]
+IF
+ItemAddedToCharacter((ITEMGUID)_Item, (CHARACTERGUID)_Char)
+AND
+DB_IsPlayer(_Char)
+AND
+ItemIsEquipable(_Item, 1)
+AND
+NRD_ItemGetInt(_Item, "Level", _ItemLevel)
+THEN
+DB_AIL_ItemList(_Item, _ItemLevel);
+*/
+
 // Using book
 
 IF
@@ -90,6 +105,15 @@ NOT DB_AIL_RarityActive(_ItemType)
 THEN
 DB_AIL_RarityActive(_ItemType);
 
+IF
+GlobalFlagSet("AIL_Dialog_Level")
+AND
+DB_IsPlayer(_Char)
+THEN
+GlobalClearFlag("AIL_Dialog_Level");
+InventoryLaunchIterator(_Char, "AIL_InventoryLevelUp", "AIL_CleanUp");
+
 EXITSECTION
 
 ENDEXITSECTION
+ParentTargetEdge "__Start"

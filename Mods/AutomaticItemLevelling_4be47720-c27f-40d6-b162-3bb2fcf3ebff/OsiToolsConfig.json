@@ -1,7 +1,9 @@
 {
-    "RequiredExtensionVersion": 45,
+    "RequiredExtensionVersion": 46,
+    "ModTable": "AIL",
     "FeatureFlags": [
         "OsirisExtensions",
+        "Lua",
         "Preprocessor"
     ]
 }
