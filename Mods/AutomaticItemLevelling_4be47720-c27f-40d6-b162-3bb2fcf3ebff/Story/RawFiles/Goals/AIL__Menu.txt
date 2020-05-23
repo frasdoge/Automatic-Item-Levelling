@@ -20,6 +20,47 @@ GlobalSetFlag("AIL_Common");
 
 KBSECTION
 
+// Have all levelable items be recorded so that, if a rarity tier's scaling is disabled, items can be reset to their original level
+
+/* [OSITOOLS_ONLY]
+IF
+GameStarted(_Region, _)
+AND
+IsGameLevel(_Region, 1)
+AND
+GlobalGetFlag("AIL_RarityInit", 0)
+THEN
+GlobalSetFlag("AIL_RarityInit");
+AIL_InitInvRarity();
+
+PROC
+AIL_InitInvRarity()
+AND
+DB_IsPlayer(_Char)
+THEN
+InventoryLaunchIterator(_Char, "AIL_InitInvRarity", "");
+
+IF
+StoryEvent((ITEMGUID)_Item, "AIL_InitInvRarity")
+AND
+ItemIsEquipable(_Item, 1)
+AND
+NRD_ItemGetInt(_Item, "Level", _ItemLevel)
+THEN
+DB_AIL_ItemList(_Item, _ItemLevel);
+
+IF
+ItemAddedToCharacter((ITEMGUID)_Item, (CHARACTERGUID)_Char)
+AND
+DB_IsPlayer(_Char)
+AND
+ItemIsEquipable(_Item, 1)
+AND
+NRD_ItemGetInt(_Item, "Level", _ItemLevel)
+THEN
+DB_AIL_ItemList(_Item, _ItemLevel);
+*/
+
 // Register to LeaderLib if extender installed
 
 /* [OSITOOLS_ONLY]
@@ -55,21 +96,6 @@ ObjectGetFlag(_Char, "AIL_HasReceivedBook", 0)
 THEN
 ItemTemplateAddTo("BOOK_AIL_ArmamentsOfTheGods_e5907cf1-cfa5-4f3c-bc41-25377f074d32", _Char, 1);
 ObjectSetFlag(_Char, "AIL_HasReceivedBook");
-*/
-
-// Store original item level for rarity option if extender installed
-
-/* [OSITOOLS_ONLY]
-IF
-ItemAddedToCharacter((ITEMGUID)_Item, (CHARACTERGUID)_Char)
-AND
-DB_IsPlayer(_Char)
-AND
-ItemIsEquipable(_Item, 1)
-AND
-NRD_ItemGetInt(_Item, "Level", _ItemLevel)
-THEN
-DB_AIL_ItemList(_Item, _ItemLevel);
 */
 
 // Using book

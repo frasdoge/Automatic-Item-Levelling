@@ -6,9 +6,7 @@ KBSECTION
 
 // Events to trigger levelling on
 IF
-GameStarted(_Region, _)
-AND
-IsGameLevel(_Region, 1)
+SavegameLoaded(_, _, _, _)
 AND
 DB_IsPlayer(_Char)
 THEN
@@ -24,14 +22,14 @@ ProcObjectTimer(_Char, "AIL_LevelUpDelay", 1200); // Delay on levelling to allow
 PROC
 ProcObjectTimerFinished((CHARACTERGUID)_Char, "AIL_LevelUpDelay")
 THEN
-InventoryLaunchIterator(_Char, "AIL_InventoryLevelUp", "AIL_CleanUp");
+InventoryLaunchIterator(_Char, "AIL_InventoryLevelUp", "");
 
 IF
 CharacterJoinedParty((CHARACTERGUID)_Char)
 AND
 DB_IsPlayer(_Char)
 THEN
-InventoryLaunchIterator(_Char, "AIL_InventoryLevelUp", "AIL_CleanUp");
+InventoryLaunchIterator(_Char, "AIL_InventoryLevelUp", "");
 
 IF
 ItemAddedToCharacter((ITEMGUID)_Item, (CHARACTERGUID)_Char)
