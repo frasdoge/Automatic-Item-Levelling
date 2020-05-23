@@ -1038,7 +1038,7 @@
                                                 "TagText" : {
                                                    "handle" : "hd57ce70cgbd31g4972g9ed8gb2eb2e90ee92",
                                                    "type" : 28,
-                                                   "value" : "You do not wish to alter your gift."
+                                                   "value" : "You do not wish to alter your blessing."
                                                 },
                                                 "stub" : {"type" : 19, "value" : 1}
                                              }
@@ -1932,7 +1932,7 @@
          },
          "editorData" : {
             "needLayout" : {"type" : 19, "value" : 0},
-            "nextNodeId" : {"type" : 5, "value" : 26}
+            "nextNodeId" : {"type" : 5, "value" : 27}
          }
       }
    }
