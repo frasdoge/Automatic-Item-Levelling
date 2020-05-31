@@ -22,6 +22,7 @@ GlobalSetFlag("AIL_RarityDownscale");
 KBSECTION
 
 // Have all levelable items be recorded so that, if a rarity tier's scaling is disabled, items can be reset to their original level
+// Also add in the flag requested to disable rarity de-scaling for compatibility reasons
 
 /* [OSITOOLS_ONLY]
 IF
@@ -29,9 +30,10 @@ GameStarted(_Region, _)
 AND
 IsGameLevel(_Region, 1)
 AND
-GlobalGetFlag("AIL_RarityInit", 0)
+GlobalGetFlag("AIL_RarityInitBodge", 0)
 THEN
-GlobalSetFlag("AIL_RarityInit");
+GlobalSetFlag("AIL_RarityInitBodge");
+GlobalSetFlag("AIL_RarityDownscale");
 AIL_InitInvRarity();
 
 PROC
