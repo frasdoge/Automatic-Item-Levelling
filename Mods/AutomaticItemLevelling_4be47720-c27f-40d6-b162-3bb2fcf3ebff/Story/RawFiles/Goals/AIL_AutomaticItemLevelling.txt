@@ -10,7 +10,7 @@ SavegameLoaded(_, _, _, _)
 AND
 DB_IsPlayer(_Char)
 THEN
-InventoryLaunchIterator(_Char, "AIL_InventoryLevelUp", "");
+ProcObjectTimer(_Char, "AIL_LevelUpDelay", 1200); // Delay on levelling to allow for game lag and avoid issues
 
 IF
 CharacterLeveledUp((CHARACTERGUID)_Char)

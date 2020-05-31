@@ -17,6 +17,7 @@ GlobalSetFlag("AIL_Epic");
 GlobalSetFlag("AIL_Rare");
 GlobalSetFlag("AIL_Uncommon");
 GlobalSetFlag("AIL_Common");
+GlobalSetFlag("AIL_RarityDownscale");
 
 KBSECTION
 
@@ -137,7 +138,7 @@ AND
 DB_IsPlayer(_Char)
 THEN
 GlobalClearFlag("AIL_Dialog_Level");
-InventoryLaunchIterator(_Char, "AIL_InventoryLevelUp", "AIL_CleanUp");
+InventoryLaunchIterator(_Char, "AIL_InventoryLevelUp", "");
 
 EXITSECTION
 

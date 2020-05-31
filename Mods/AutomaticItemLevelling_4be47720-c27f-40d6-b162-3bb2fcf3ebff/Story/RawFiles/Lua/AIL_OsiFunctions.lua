@@ -11,7 +11,7 @@ local function RarityUpOrDownScale(item)
     -- Ext.Print("Rarity Inactive")
 
     local itemLevelList = Osi.DB_AIL_ItemList:Get(item, nil)[1]
-    if (next(itemLevelList) ~= nil) then
+    if (next(itemLevelList) ~= nil && GlobalGetFlag("AIL_RarityDownscale")) then
         local oLevel = itemLevelList[2]
         ItemLevelUpTo(item, oLevel)
     end
