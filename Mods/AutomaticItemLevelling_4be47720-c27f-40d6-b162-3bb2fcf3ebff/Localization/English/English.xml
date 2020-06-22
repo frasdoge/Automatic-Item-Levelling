@@ -4,7 +4,7 @@
 	<content contentuid="h3dbf3021g78e4g4971gbb40gd5fc943d6b04" Source="AIL_Dialog.lsj">[Disabled] Divine</content>
 	<content contentuid="h734fab91g0feeg4f5cg93adgb95667ce7190" Source="AIL_Dialog.lsj">[Enabled] Unique</content>
 	<content contentuid="h567980c4gf6aeg47b4g9e31g000548e30884" Source="AIL_Dialog.lsj">[Disabled] Uncommon</content>
-	<content contentuid="h8cc20a06g4b04g4a03g8adbge00fc77e4c62" Source="AIL_Dialog.lsj">The Gods have recognised your talents and bestowed upon you a blessing: weapons and armour shall level as you do. Do you wish to modify this blessing?</content>
+	<content contentuid="h8cc20a06g4b04g4a03g8adbge00fc77e4c62" Source="AIL_Dialog.lsj">The Gods have bestowed upon you a blessing: weapons and armour shall level as you do.&lt;br&gt;Do you wish to modify this blessing?</content>
 	<content contentuid="h81fcdff4g2452g4c39g90ecg9ec00199b7d6" Source="AIL_Dialog.lsj">[Enabled] Rarity-Based Downscaling</content>
 	<content contentuid="h02878cf1gaecdg45bbgb838gfc4d7a493576" Source="AIL_Dialog.lsj">[Enabled] Uncommon</content>
 	<content contentuid="hde12a0ffg54bbg4346g8256gf851f30232b4" Source="AIL_Dialog.lsj">[Enabled] Divine</content>
