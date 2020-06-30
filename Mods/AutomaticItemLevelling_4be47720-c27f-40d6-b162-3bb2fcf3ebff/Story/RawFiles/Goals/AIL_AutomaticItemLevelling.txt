@@ -69,7 +69,7 @@ AND
 CharacterGetLevel(_Char, _CharLevel)
 /* [OSITOOLS_ONLY]
 AND
-AIL_RarityUpOrDownScale(_Item)
+AIL_RarityUpOrDownScale(_Item, _Durability)
 AND
 NRD_ItemGetInt(_Item, "Level", _ItemLevel)
 AND

@@ -33,7 +33,6 @@ AND
 GlobalGetFlag("AIL_RarityInitBodge", 0)
 THEN
 GlobalSetFlag("AIL_RarityInitBodge");
-GlobalSetFlag("AIL_RarityDownscale");
 AIL_InitInvRarity();
 
 PROC
@@ -46,6 +45,8 @@ InventoryLaunchIterator(_Char, "AIL_InitInvRarity", "");
 IF
 StoryEvent((ITEMGUID)_Item, "AIL_InitInvRarity")
 AND
+NOT DB_AIL_ItemList(_Item, _)
+AND
 ItemIsEquipable(_Item, 1)
 AND
 NRD_ItemGetInt(_Item, "Level", _ItemLevel)
@@ -56,6 +57,8 @@ IF
 ItemAddedToCharacter((ITEMGUID)_Item, (CHARACTERGUID)_Char)
 AND
 DB_IsPlayer(_Char)
+AND
+NOT DB_AIL_ItemList(_Item, _)
 AND
 ItemIsEquipable(_Item, 1)
 AND

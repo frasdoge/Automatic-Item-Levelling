@@ -12,7 +12,7 @@
                             <attribute id="MD5" value="" type="23" />
                             <attribute id="Name" value="Divinity: Original Sin 2" type="22" />
                             <attribute id="UUID" value="1301db3d-1f54-4e98-9be5-5094030916e4" type="22" />
-                            <attribute id="Version" value="372645092" type="4" />
+                            <attribute id="Version" value="373234071" type="4" />
                         </node>
                     </children>
                 </node>
@@ -34,7 +34,7 @@
                     <attribute id="Tags" value="" type="30" />
                     <attribute id="Type" value="Add-on" type="22" />
                     <attribute id="UUID" value="4be47720-c27f-40d6-b162-3bb2fcf3ebff" type="22" />
-                    <attribute id="Version" value="453181440" type="4" />
+                    <attribute id="Version" value="453246976" type="4" />
                     <children>
                         <node id="PublishVersion">
                             <attribute id="Version" value="909321303" type="4" />
