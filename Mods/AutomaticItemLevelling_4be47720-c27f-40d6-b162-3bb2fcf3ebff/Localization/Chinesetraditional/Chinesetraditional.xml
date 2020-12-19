@@ -1,23 +1,23 @@
 <contentList>
-	<content contentuid="h94d51b8bgf3eag493cg882dg99cfc5134573" Source="AIL_Dialog.lsj">[Enabled] Common</content>
-	<content contentuid="hb88707e6g310bg48deg9710g006794af14fb" Source="AIL_Dialog.lsj">[Disabled] Unique</content>
-	<content contentuid="h3dbf3021g78e4g4971gbb40gd5fc943d6b04" Source="AIL_Dialog.lsj">[Disabled] Divine</content>
-	<content contentuid="h734fab91g0feeg4f5cg93adgb95667ce7190" Source="AIL_Dialog.lsj">[Enabled] Unique</content>
-	<content contentuid="h567980c4gf6aeg47b4g9e31g000548e30884" Source="AIL_Dialog.lsj">[Disabled] Uncommon</content>
-	<content contentuid="h8cc20a06g4b04g4a03g8adbge00fc77e4c62" Source="AIL_Dialog.lsj">The Gods have recognised your talents and bestowed upon you a blessing: weapons and armour shall level as you do. Do you wish to modify this blessing?</content>
-	<content contentuid="h81fcdff4g2452g4c39g90ecg9ec00199b7d6" Source="AIL_Dialog.lsj">[Enabled] Rarity-Based Downscaling</content>
-	<content contentuid="h02878cf1gaecdg45bbgb838gfc4d7a493576" Source="AIL_Dialog.lsj">[Enabled] Uncommon</content>
-	<content contentuid="hde12a0ffg54bbg4346g8256gf851f30232b4" Source="AIL_Dialog.lsj">[Enabled] Divine</content>
-	<content contentuid="hfa4ad59bg67c0g45efg9687gcc0f26d0cb2e" Source="AIL_Dialog.lsj">[Disabled] Rarity-Based Downscaling</content>
-	<content contentuid="hd57ce70cgbd31g4972g9ed8gb2eb2e90ee92" Source="AIL_Dialog.lsj">You do not wish to alter your blessing.</content>
-	<content contentuid="h4538f37eg64b2g48a8ga3d4g28454cf847f0" Source="AIL_Dialog.lsj">[Disabled] Legendary</content>
-	<content contentuid="hba627e3eg1adeg4e5bgbeb7g4f88517415fb" Source="AIL_Dialog.lsj">[Disabled] Common</content>
-	<content contentuid="h4cb6fa27g55d2g496cg834cgc770327e2833" Source="AIL_Dialog.lsj">[Enabled] Legendary</content>
-	<content contentuid="hab378f13g40a8g48e9ga763g4bc38d43900d" Source="AIL_Dialog.lsj">[Disabled] Rare</content>
-	<content contentuid="h8b81caf8g94ddg4cd9g9b37g829f91c9aa29" Source="AIL_Dialog.lsj">[Disabled] Epic</content>
-	<content contentuid="h60c762a5g0cd0g4468ga5dcg4d41e51b1d78" Source="AIL_Dialog.lsj">[Enabled] Rare</content>
-	<content contentuid="he38b0c29g4035g4c35g8df2gb1d5b06971e5" Source="AIL_Dialog.lsj">[Enabled] Epic</content>
-	<content contentuid="h21d985f7gd714g47e5g9e67g8b2fbfe63d4c" Source="BOOK_AIL_ArmamentsOfTheGods">A book detailing a unique gift from the Gods, ensuring all equipment is of the highest quality.</content>
-	<content contentuid="h9627170egcfa5g4749g8c8fg04033da127b7" Source="BOOK_AIL_ArmamentsOfTheGods">Armaments of the Gods</content>
-	<content contentuid="h2588ce8bgd9abg4a99ga06fga29cc4ccd53c" Source="BOOK_AIL_ArmamentsOfTheGods">Read</content>
+	<content contentuid="h94d51b8bgf3eag493cg882dg99cfc5134573" Source="AIL_Dialog.lsj">[已啟用] 普通</content>
+	<content contentuid="hb88707e6g310bg48deg9710g006794af14fb" Source="AIL_Dialog.lsj">[已禁用] 獨特</content>
+	<content contentuid="h3dbf3021g78e4g4971gbb40gd5fc943d6b04" Source="AIL_Dialog.lsj">[已禁用] 聖神</content>
+	<content contentuid="h734fab91g0feeg4f5cg93adgb95667ce7190" Source="AIL_Dialog.lsj">[已啟用] 獨特</content>
+	<content contentuid="h567980c4gf6aeg47b4g9e31g000548e30884" Source="AIL_Dialog.lsj">[已禁用] 精良</content>
+	<content contentuid="h8cc20a06g4b04g4a03g8adbge00fc77e4c62" Source="AIL_Dialog.lsj">眾神賞識你的才華，並賜予你祝福： 武器與護甲已經達到了和你相同的水準。 你是否想變更這種祝福？</content>
+	<content contentuid="h81fcdff4g2452g4c39g90ecg9ec00199b7d6" Source="AIL_Dialog.lsj">[已啟用] 基於品質降級</content>
+	<content contentuid="h02878cf1gaecdg45bbgb838gfc4d7a493576" Source="AIL_Dialog.lsj">[已啟用] 精良</content>
+	<content contentuid="hde12a0ffg54bbg4346g8256gf851f30232b4" Source="AIL_Dialog.lsj">[已啟用] 聖神</content>
+	<content contentuid="hfa4ad59bg67c0g45efg9687gcc0f26d0cb2e" Source="AIL_Dialog.lsj">[已禁用] 基於品質降級</content>
+	<content contentuid="hd57ce70cgbd31g4972g9ed8gb2eb2e90ee92" Source="AIL_Dialog.lsj">你不想變更這種祝福。</content>
+	<content contentuid="h4538f37eg64b2g48a8ga3d4g28454cf847f0" Source="AIL_Dialog.lsj">[已禁用] 傳說</content>
+	<content contentuid="hba627e3eg1adeg4e5bgbeb7g4f88517415fb" Source="AIL_Dialog.lsj">[已禁用] 普通</content>
+	<content contentuid="h4cb6fa27g55d2g496cg834cgc770327e2833" Source="AIL_Dialog.lsj">[已啟用] 傳說</content>
+	<content contentuid="hab378f13g40a8g48e9ga763g4bc38d43900d" Source="AIL_Dialog.lsj">[已禁用] 稀有</content>
+	<content contentuid="h8b81caf8g94ddg4cd9g9b37g829f91c9aa29" Source="AIL_Dialog.lsj">[已禁用] 史詩</content>
+	<content contentuid="h60c762a5g0cd0g4468ga5dcg4d41e51b1d78" Source="AIL_Dialog.lsj">[已啟用] 稀有</content>
+	<content contentuid="he38b0c29g4035g4c35g8df2gb1d5b06971e5" Source="AIL_Dialog.lsj">[已啟用] 史詩</content>
+	<content contentuid="h21d985f7gd714g47e5g9e67g8b2fbfe63d4c" Source="BOOK_AIL_ArmamentsOfTheGods">這本書詳述了眾神獨特的禮物，確保所有裝備都達到了最高品質。</content>
+	<content contentuid="h9627170egcfa5g4749g8c8fg04033da127b7" Source="BOOK_AIL_ArmamentsOfTheGods">《眾神軍備》</content>
+	<content contentuid="h2588ce8bgd9abg4a99ga06fga29cc4ccd53c" Source="BOOK_AIL_ArmamentsOfTheGods">閱讀</content>
 </contentList>
